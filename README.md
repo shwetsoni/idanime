@@ -38,30 +38,32 @@
 
 ## Themes
 
+Click a picture for the full IDA window.
+
 <table>
   <tr>
-    <td align="center" width="50%"><img src="screenshots/sakura-yoru.webp"><br><b>sakura-yoru</b><br><sub>cherry blossoms, purple night</sub></td>
-    <td align="center" width="50%"><img src="screenshots/neon-ronin.webp"><br><b>neon-ronin</b><br><sub>synthwave sun, city skyline</sub></td>
+    <td align="center" width="50%"><a href="screenshots/sakura-yoru.webp"><img src="screenshots/thumbs/sakura-yoru.webp"></a><br><b>sakura-yoru</b><br><sub>cherry blossoms, purple night</sub></td>
+    <td align="center" width="50%"><a href="screenshots/neon-ronin.webp"><img src="screenshots/thumbs/neon-ronin.webp"></a><br><b>neon-ronin</b><br><sub>synthwave sun, city skyline</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="screenshots/hoshizora-witch.webp"><br><b>hoshizora-witch</b><br><sub>witch on a crescent moon</sub></td>
-    <td align="center"><img src="screenshots/kitsune-yuki.webp"><br><b>kitsune-yuki</b><br><sub>fox girl, snow, icy blue</sub></td>
+    <td align="center"><a href="screenshots/hoshizora-witch.webp"><img src="screenshots/thumbs/hoshizora-witch.webp"></a><br><b>hoshizora-witch</b><br><sub>witch on a crescent moon</sub></td>
+    <td align="center"><a href="screenshots/kitsune-yuki.webp"><img src="screenshots/thumbs/kitsune-yuki.webp"></a><br><b>kitsune-yuki</b><br><sub>fox girl, snow, icy blue</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="screenshots/akatsuki-torii.webp"><br><b>akatsuki-torii</b><br><sub>torii gate, kitsune mask, red dawn</sub></td>
-    <td align="center"><img src="screenshots/ame-lofi.webp"><br><b>ame-lofi</b><br><sub>rainy window, headphones</sub></td>
+    <td align="center"><a href="screenshots/akatsuki-torii.webp"><img src="screenshots/thumbs/akatsuki-torii.webp"></a><br><b>akatsuki-torii</b><br><sub>torii gate, kitsune mask, red dawn</sub></td>
+    <td align="center"><a href="screenshots/ame-lofi.webp"><img src="screenshots/thumbs/ame-lofi.webp"></a><br><b>ame-lofi</b><br><sub>rainy window, headphones</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="screenshots/kurenai-vampire.webp"><br><b>kurenai-vampire</b><br><sub>crimson moon, bats</sub></td>
-    <td align="center"><img src="screenshots/kido-pilot.webp"><br><b>kido-pilot</b><br><sub>mecha pilot HUD</sub></td>
+    <td align="center"><a href="screenshots/kurenai-vampire.webp"><img src="screenshots/thumbs/kurenai-vampire.webp"></a><br><b>kurenai-vampire</b><br><sub>crimson moon, bats</sub></td>
+    <td align="center"><a href="screenshots/kido-pilot.webp"><img src="screenshots/thumbs/kido-pilot.webp"></a><br><b>kido-pilot</b><br><sub>mecha pilot HUD</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="screenshots/denno-hacker.webp"><br><b>denno-hacker</b><br><sub>green katakana rain</sub></td>
-    <td align="center"><img src="screenshots/yuki-samurai.webp"><br><b>yuki-samurai</b><br><sub>samurai, grey moon</sub></td>
+    <td align="center"><a href="screenshots/denno-hacker.webp"><img src="screenshots/thumbs/denno-hacker.webp"></a><br><b>denno-hacker</b><br><sub>green katakana rain</sub></td>
+    <td align="center"><a href="screenshots/yuki-samurai.webp"><img src="screenshots/thumbs/yuki-samurai.webp"></a><br><b>yuki-samurai</b><br><sub>samurai, grey moon</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="screenshots/maho-pastel.webp"><br><b>maho-pastel</b> (light)<br><sub>magical girl, pink pastel</sub></td>
-    <td align="center"><img src="screenshots/natsu-matsuri.webp"><br><b>natsu-matsuri</b><br><sub>summer festival fireworks</sub></td>
+    <td align="center"><a href="screenshots/maho-pastel.webp"><img src="screenshots/thumbs/maho-pastel.webp"></a><br><b>maho-pastel</b> (light)<br><sub>magical girl, pink pastel</sub></td>
+    <td align="center"><a href="screenshots/natsu-matsuri.webp"><img src="screenshots/thumbs/natsu-matsuri.webp"></a><br><b>natsu-matsuri</b><br><sub>summer festival fireworks</sub></td>
   </tr>
 </table>
 
