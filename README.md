@@ -150,3 +150,7 @@ click-through overlay on top of the graph canvas and blends the art in:
 - **No art in graph view.** Check that `anime_graph_bg.py` is in the user
   `plugins` folder and that you restarted IDA. If the theme isn't detected, set
   `THEME_OVERRIDE`.
+
+## License
+
+[MIT](LICENSE)
