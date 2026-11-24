@@ -1,0 +1,460 @@
+/*
+ * Maho Pastel  —  魔法少女 MAHŌ PASTEL
+ * Anime-inspired theme for IDA Pro 9.x
+ *
+ * Install: copy this folder to  %APPDATA%\Hex-Rays\IDA Pro\themes\maho-pastel\
+ *          (Linux/macOS: ~/.idapro/themes/maho-pastel/), then Options > Colors... > Theme.
+ * Art:     art.png sits bottom-right of the disassembly / pseudocode views.
+ *          Replace art.png with any transparent PNG to change it, or delete the
+ *          "background" lines in the first CustomIDAMemo block to turn it off.
+ */
+
+@importtheme "default";
+
+/* ================= General UI ================= */
+
+QWidget
+{
+    background-color: #f7f0fd;
+    color: #2b2140;
+}
+
+QMainWindow::separator
+{
+    background-color: #e4d6f1;
+    width: 4px;
+    height: 4px;
+}
+
+QMenuBar, QMenuBar::item
+{
+    background-color: #f1e7fa;
+    color: #2b2140;
+}
+
+QMenuBar::item:selected,
+QMenu::item:selected
+{
+    background-color: #f2cfdf;
+    color: #a51d5e;
+}
+
+QMenu
+{
+    background-color: #f1e7fa;
+    border: 1px solid #e4d6f1;
+    border-radius: 6px;
+}
+
+QMenu::item:disabled
+{
+    color: #7a6e93;
+}
+
+QMenu::separator
+{
+    height: 1px;
+    background-color: #e4d6f1;
+    margin: 4px 8px;
+}
+
+QToolBar
+{
+    background-color: #f1e7fa;
+    border: none;
+}
+
+QToolButton:hover
+{
+    background-color: #f8e5ee;
+    border-radius: 4px;
+}
+
+QStatusBar
+{
+    background-color: #f1e7fa;
+    color: #54496b;
+}
+
+QStatusBar QLabel
+{
+    border: none;
+}
+
+QTabBar::tab
+{
+    background-color: #f1e7fa;
+    color: #7a6e93;
+    border: none;
+    padding: 4px 12px;
+}
+
+QTabBar::tab:selected
+{
+    background-color: #ffffff;
+    color: #2b2140;
+    border-bottom: 2px solid #c2256f;
+}
+
+QTabBar::tab:hover
+{
+    color: #2b2140;
+}
+
+DockWidgetTitle,
+DockAreaDragTitle
+{
+    background-color: #f1e7fa;
+    color: #7a6e93;
+    border: none;
+}
+
+DockWidgetTitle[active="true"]
+{
+    background-color: #ffffff;
+    color: #c2256f;
+}
+
+QHeaderView::section
+{
+    background-color: #f1e7fa;
+    color: #54496b;
+    border: none;
+    border-right: 1px solid #e4d6f1;
+    border-bottom: 1px solid #e4d6f1;
+    padding: 3px 6px;
+}
+
+QTableView,
+QTreeView,
+QListView
+{
+    background-color: #ffffff;
+    alternate-background-color: #f7f6f7;
+    selection-background-color: #f2cfdf;
+    selection-color: #a51d5e;
+    gridline-color: #e4d6f1;
+    border: 1px solid #e4d6f1;
+}
+
+QTableCornerButton::section
+{
+    background-color: #f1e7fa;
+    border: none;
+}
+
+QLineEdit,
+QTextEdit,
+QPlainTextEdit,
+QComboBox,
+QSpinBox
+{
+    background-color: #ffffff;
+    color: #2b2140;
+    border: 1px solid #e4d6f1;
+    border-radius: 4px;
+    selection-background-color: #f2cfdf;
+    selection-color: #a51d5e;
+}
+
+QLineEdit:focus,
+QComboBox:focus,
+QSpinBox:focus,
+QLineEdit:hover,
+QComboBox:hover
+{
+    border: 1px solid #c2256f;
+}
+
+QComboBox > QLineEdit,
+QComboBox > QLineEdit:hover,
+QComboBox > QLineEdit:focus
+{
+    border: none;
+}
+
+QComboBox QAbstractItemView
+{
+    background-color: #ffffff;
+    border: 1px solid #c2256f;
+    selection-background-color: #f2cfdf;
+}
+
+QPushButton
+{
+    background-color: #ffffff;
+    color: #2b2140;
+    border: 1px solid #e4d6f1;
+    border-radius: 4px;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 10px;
+}
+
+QPushButton:hover,
+QPushButton:default
+{
+    border: 1px solid #c2256f;
+}
+
+QPushButton:pressed
+{
+    background-color: #f2cfdf;
+}
+
+TNavBand > QPushButton,
+nav_scroll_button_t,
+RegJumpButton
+{
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    border: none;
+}
+
+QRadioButton,
+QLabel,
+QCheckBox
+{
+    background: transparent;
+}
+
+QGroupBox
+{
+    border: 1px solid #e4d6f1;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+
+QGroupBox::title
+{
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 8px;
+    padding: 0 4px;
+    color: #c2256f;
+}
+
+QToolTip,
+QTipLabel
+{
+    background-color: #ffffff;
+    color: #2b2140;
+    border: 1px solid #c2256f;
+    border-radius: 4px;
+}
+
+QScrollBar
+{
+    background-color: #f7f0fd;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+}
+
+QScrollBar::handle
+{
+    background-color: #e4d6f1;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+QScrollBar::handle:hover
+{
+    background-color: #c2256f;
+}
+
+QScrollBar::handle:vertical
+{
+    min-height: 24px;
+}
+
+QScrollBar::handle:horizontal
+{
+    min-width: 24px;
+}
+
+QScrollBar::add-line,
+QScrollBar::sub-line
+{
+    width: 0;
+    height: 0;
+}
+
+QScrollBar::add-page,
+QScrollBar::sub-page
+{
+    background: none;
+}
+
+MainMsgList
+{
+    background-color: #ffffff;
+    color: #54496b;
+}
+
+TChooser
+{
+    qproperty-highlight-bg-default: #e8ceb2;
+    qproperty-highlight-bg-selected: #f2cfdf;
+}
+
+TCpuRegs
+{
+    qproperty-register-defined: #2b2140;
+    qproperty-register-changed: #c2256f;
+    qproperty-register-edited: #b45a00;
+}
+
+TCpuRegs ui_label_t
+{
+    color: #7a6e93;
+}
+
+/* ================= Listing / pseudocode / hex ================= */
+
+CustomIDAMemo
+{
+    /* background art: transparent line background + PNG anchored bottom-right */
+    qproperty-line-bg-default: rgba(255, 255, 255, 0);
+    background: #ffffff url("$RELPATH/art.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    qproperty-line-fg-default: #2b2140;
+    qproperty-line-fg-insn: #c2256f;
+    qproperty-line-fg-keyword: #c2256f;
+    qproperty-line-fg-punctuation: #54496b;
+    qproperty-line-fg-regular-comment: #716889;
+    qproperty-line-fg-repeatable-comment: #716889;
+    qproperty-line-fg-automatic-comment: #716889;
+    qproperty-line-fg-extra-line: #716889;
+    qproperty-line-fg-collapsed-line: #716889;
+    qproperty-line-fg-register-name: #2563c9;
+    qproperty-line-fg-locvar: #2563c9;
+    qproperty-line-fg-libfunc: #2563c9;
+    qproperty-line-fg-numlit-in-insn: #b45a00;
+    qproperty-line-fg-numlit-in-data: #b45a00;
+    qproperty-line-fg-void-opnd: #b45a00;
+    qproperty-line-fg-strlit-in-insn: #1f7a44;
+    qproperty-line-fg-strlit-in-data: #1f7a44;
+    qproperty-line-fg-charlit-in-insn: #1f7a44;
+    qproperty-line-fg-charlit-in-data: #1f7a44;
+    qproperty-line-fg-code-name: #7a3fd1;
+    qproperty-line-fg-dummy-code-name: #7a3fd1;
+    qproperty-line-fg-regular-data-name: #7a3fd1;
+    qproperty-line-fg-dummy-data-name: #7a3fd1;
+    qproperty-line-fg-demangled-name: #7a3fd1;
+    qproperty-line-fg-import-name: #7a3fd1;
+    qproperty-line-fg-alt-opnd: #7a3fd1;
+    qproperty-line-fg-unknown-name: #7a6e93;
+    qproperty-line-fg-dummy-unknown-name: #7a6e93;
+    qproperty-line-fg-hidden: #7a6e93;
+    qproperty-line-fg-asm-directive: #6b6286;
+    qproperty-line-fg-segment-name: #6b6286;
+    qproperty-line-fg-macro: #c2256f;
+    qproperty-line-fg-code-xref: #7a6e93;
+    qproperty-line-fg-data-xref: #7a6e93;
+    qproperty-line-fg-code-xref-to-tail: #b45a00;
+    qproperty-line-fg-data-xref-to-tail: #b45a00;
+    qproperty-line-fg-line-prefix: #8a7ea3;
+    qproperty-line-fg-opcode-byte: #8a7ea3;
+    qproperty-line-fg-error: #d93a4a;
+    qproperty-line-fg-patched-bytes: #b45a00;
+    qproperty-line-fg-unsaved-changes: #c2256f;
+
+    qproperty-line-pfx-libfunc: #2563c9;
+    qproperty-line-pfx-func: #7a3fd1;
+    qproperty-line-pfx-insn: #8a7ea3;
+    qproperty-line-pfx-data: #1f7a44;
+    qproperty-line-pfx-unexplored: #7a6e93;
+    qproperty-line-pfx-extern: #b45a00;
+    qproperty-line-pfx-current-item: #c2256f;
+    qproperty-line-pfx-current-line: #c2256f;
+
+    qproperty-line-bg-highlight: #e8ceb2;
+    qproperty-line-bg-hint: #f7f6f7;
+    qproperty-line-bg-bpt-enabled: #f2bac0;
+    qproperty-line-bg-bpt-disabled: #cbe6d5;
+    qproperty-line-bg-dbg: #ffffff;
+    qproperty-line-bg-dbg-ip: #bed0ef;
+    qproperty-line-bg-dbg-ip-bpt-enabled: #c79cb5;
+    qproperty-line-bg-dbg-ip-bpt-disabled: #bed0ef;
+    qproperty-line-bg-dbg-ip-bpt-unavailable: #bed0ef;
+    qproperty-line-bg-dbg-bpt-enabled: #f2bac0;
+    qproperty-line-bg-dbg-bpt-disabled: #cbe6d5;
+    qproperty-line-bg-dbg-bpt-unavailable: #e8ceb2;
+
+    /* transparent graph canvas so the art shows behind the nodes */
+    qproperty-graph-bg-top: rgba(255, 255, 255, 0);
+    qproperty-graph-bg-bottom: rgba(255, 255, 255, 0);
+    qproperty-graph-node-title-normal: #e9def4;
+    qproperty-graph-node-title-selected: #f2cfdf;
+    qproperty-graph-node-title-current: #eab3cd;
+    qproperty-graph-node-frame-group: #c2256f;
+    qproperty-graph-node-shadow: #c9bfd6;
+    qproperty-graph-node-high1: #d3e0f4;
+    qproperty-graph-node-high2: #e4d9f6;
+    qproperty-graph-node-foreign: #d93a4a;
+    qproperty-graph-edge-normal: #2563c9;
+    qproperty-graph-edge-yes: #2e9d57;
+    qproperty-graph-edge-no: #d93a4a;
+    qproperty-graph-edge-high: #b45a00;
+    qproperty-graph-edge-current: #c2256f;
+}
+
+/* keep the art visible while debugging */
+CustomIDAMemo[debugging="true"]
+{
+    qproperty-line-bg-default: rgba(255, 255, 255, 0);
+    qproperty-line-fg-default: #2b2140;
+    qproperty-line-pfx-current-item: #c2256f;
+    qproperty-line-pfx-current-line: #c2256f;
+    qproperty-line-bg-bpt-enabled: #f2bac0;
+    qproperty-line-bg-bpt-disabled: #cbe6d5;
+}
+
+/* hover hints: solid, no art */
+CustomIDAMemo[hints="true"]
+{
+    background: #f7f6f7;
+    qproperty-line-bg-default: #f7f6f7;
+    qproperty-line-fg-default: #2b2140;
+    qproperty-line-pfx-current-item: #c2256f;
+    qproperty-line-pfx-current-line: #c2256f;
+}
+
+IDAViewHost
+{
+    background: #ffffff;
+}
+
+ecfringe_t,
+TextArrows
+{
+    background: transparent;
+}
+
+TextArrows
+{
+    qproperty-jump-in-function: #2563c9;
+    qproperty-jump-external-to-function: #7a3fd1;
+    qproperty-jump-under-cursor: #c2256f;
+    qproperty-jump-target: #1f7a44;
+    qproperty-register-target: #b45a00;
+}
+
+navband_t
+{
+    qproperty-lib-function: #8fb8f5;
+    qproperty-function: #f28cc0;
+    qproperty-code: #7a3fd1;
+    qproperty-data: #c7a8f5;
+    qproperty-undefined: #ece2f6;
+    qproperty-extern: #b45a00;
+    qproperty-error: #d93a4a;
+    qproperty-gap: #f7f0fd;
+    qproperty-cursor: #2b2140;
+    qproperty-auto-analysis-cursor: #b45a00;
+}

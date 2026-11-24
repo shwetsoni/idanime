@@ -1,0 +1,460 @@
+/*
+ * Akatsuki Torii  —  暁鳥居 AKATSUKI TORII
+ * Anime-inspired theme for IDA Pro 9.x
+ *
+ * Install: copy this folder to  %APPDATA%\Hex-Rays\IDA Pro\themes\akatsuki-torii\
+ *          (Linux/macOS: ~/.idapro/themes/akatsuki-torii/), then Options > Colors... > Theme.
+ * Art:     art.png sits bottom-right of the disassembly / pseudocode views.
+ *          Replace art.png with any transparent PNG to change it, or delete the
+ *          "background" lines in the first CustomIDAMemo block to turn it off.
+ */
+
+@importtheme "dark";
+
+/* ================= General UI ================= */
+
+QWidget
+{
+    background-color: #100809;
+    color: #f6e8e6;
+}
+
+QMainWindow::separator
+{
+    background-color: #3a1a1e;
+    width: 4px;
+    height: 4px;
+}
+
+QMenuBar, QMenuBar::item
+{
+    background-color: #150b0c;
+    color: #f6e8e6;
+}
+
+QMenuBar::item:selected,
+QMenu::item:selected
+{
+    background-color: #4c1f21;
+    color: #ff9a9d;
+}
+
+QMenu
+{
+    background-color: #150b0c;
+    border: 1px solid #3a1a1e;
+    border-radius: 6px;
+}
+
+QMenu::item:disabled
+{
+    color: #9a7570;
+}
+
+QMenu::separator
+{
+    height: 1px;
+    background-color: #3a1a1e;
+    margin: 4px 8px;
+}
+
+QToolBar
+{
+    background-color: #150b0c;
+    border: none;
+}
+
+QToolButton:hover
+{
+    background-color: #351719;
+    border-radius: 4px;
+}
+
+QStatusBar
+{
+    background-color: #150b0c;
+    color: #d6bcb9;
+}
+
+QStatusBar QLabel
+{
+    border: none;
+}
+
+QTabBar::tab
+{
+    background-color: #150b0c;
+    color: #9a7570;
+    border: none;
+    padding: 4px 12px;
+}
+
+QTabBar::tab:selected
+{
+    background-color: #1a0e10;
+    color: #f6e8e6;
+    border-bottom: 2px solid #ff5a5f;
+}
+
+QTabBar::tab:hover
+{
+    color: #f6e8e6;
+}
+
+DockWidgetTitle,
+DockAreaDragTitle
+{
+    background-color: #150b0c;
+    color: #9a7570;
+    border: none;
+}
+
+DockWidgetTitle[active="true"]
+{
+    background-color: #1a0e10;
+    color: #ff5a5f;
+}
+
+QHeaderView::section
+{
+    background-color: #150b0c;
+    color: #d6bcb9;
+    border: none;
+    border-right: 1px solid #3a1a1e;
+    border-bottom: 1px solid #3a1a1e;
+    padding: 3px 6px;
+}
+
+QTableView,
+QTreeView,
+QListView
+{
+    background-color: #1a0e10;
+    alternate-background-color: #231719;
+    selection-background-color: #4c1f21;
+    selection-color: #ff9a9d;
+    gridline-color: #3a1a1e;
+    border: 1px solid #3a1a1e;
+}
+
+QTableCornerButton::section
+{
+    background-color: #150b0c;
+    border: none;
+}
+
+QLineEdit,
+QTextEdit,
+QPlainTextEdit,
+QComboBox,
+QSpinBox
+{
+    background-color: #1a0e10;
+    color: #f6e8e6;
+    border: 1px solid #3a1a1e;
+    border-radius: 4px;
+    selection-background-color: #4c1f21;
+    selection-color: #ff9a9d;
+}
+
+QLineEdit:focus,
+QComboBox:focus,
+QSpinBox:focus,
+QLineEdit:hover,
+QComboBox:hover
+{
+    border: 1px solid #ff5a5f;
+}
+
+QComboBox > QLineEdit,
+QComboBox > QLineEdit:hover,
+QComboBox > QLineEdit:focus
+{
+    border: none;
+}
+
+QComboBox QAbstractItemView
+{
+    background-color: #1a0e10;
+    border: 1px solid #ff5a5f;
+    selection-background-color: #4c1f21;
+}
+
+QPushButton
+{
+    background-color: #1a0e10;
+    color: #f6e8e6;
+    border: 1px solid #3a1a1e;
+    border-radius: 4px;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 10px;
+}
+
+QPushButton:hover,
+QPushButton:default
+{
+    border: 1px solid #ff5a5f;
+}
+
+QPushButton:pressed
+{
+    background-color: #4c1f21;
+}
+
+TNavBand > QPushButton,
+nav_scroll_button_t,
+RegJumpButton
+{
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    border: none;
+}
+
+QRadioButton,
+QLabel,
+QCheckBox
+{
+    background: transparent;
+}
+
+QGroupBox
+{
+    border: 1px solid #3a1a1e;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+
+QGroupBox::title
+{
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 8px;
+    padding: 0 4px;
+    color: #ff5a5f;
+}
+
+QToolTip,
+QTipLabel
+{
+    background-color: #1a0e10;
+    color: #f6e8e6;
+    border: 1px solid #ff5a5f;
+    border-radius: 4px;
+}
+
+QScrollBar
+{
+    background-color: #100809;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+}
+
+QScrollBar::handle
+{
+    background-color: #3a1a1e;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+QScrollBar::handle:hover
+{
+    background-color: #ff5a5f;
+}
+
+QScrollBar::handle:vertical
+{
+    min-height: 24px;
+}
+
+QScrollBar::handle:horizontal
+{
+    min-width: 24px;
+}
+
+QScrollBar::add-line,
+QScrollBar::sub-line
+{
+    width: 0;
+    height: 0;
+}
+
+QScrollBar::add-page,
+QScrollBar::sub-page
+{
+    background: none;
+}
+
+MainMsgList
+{
+    background-color: #1a0e10;
+    color: #d6bcb9;
+}
+
+TChooser
+{
+    qproperty-highlight-bg-default: #5f3a2b;
+    qproperty-highlight-bg-selected: #4c1f21;
+}
+
+TCpuRegs
+{
+    qproperty-register-defined: #f6e8e6;
+    qproperty-register-changed: #ff5a5f;
+    qproperty-register-edited: #ff9f6b;
+}
+
+TCpuRegs ui_label_t
+{
+    color: #9a7570;
+}
+
+/* ================= Listing / pseudocode / hex ================= */
+
+CustomIDAMemo
+{
+    /* background art: transparent line background + PNG anchored bottom-right */
+    qproperty-line-bg-default: rgba(26, 14, 16, 0);
+    background: #1a0e10 url("$RELPATH/art.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    qproperty-line-fg-default: #f6e8e6;
+    qproperty-line-fg-insn: #ff5a5f;
+    qproperty-line-fg-keyword: #ff5a5f;
+    qproperty-line-fg-punctuation: #d6bcb9;
+    qproperty-line-fg-regular-comment: #8d6b6c;
+    qproperty-line-fg-repeatable-comment: #8d6b6c;
+    qproperty-line-fg-automatic-comment: #8d6b6c;
+    qproperty-line-fg-extra-line: #8d6b6c;
+    qproperty-line-fg-collapsed-line: #8d6b6c;
+    qproperty-line-fg-register-name: #ffd27a;
+    qproperty-line-fg-locvar: #ffd27a;
+    qproperty-line-fg-libfunc: #ffd27a;
+    qproperty-line-fg-numlit-in-insn: #ff9f6b;
+    qproperty-line-fg-numlit-in-data: #ff9f6b;
+    qproperty-line-fg-void-opnd: #ff9f6b;
+    qproperty-line-fg-strlit-in-insn: #a8e0b0;
+    qproperty-line-fg-strlit-in-data: #a8e0b0;
+    qproperty-line-fg-charlit-in-insn: #a8e0b0;
+    qproperty-line-fg-charlit-in-data: #a8e0b0;
+    qproperty-line-fg-code-name: #f2a9d0;
+    qproperty-line-fg-dummy-code-name: #f2a9d0;
+    qproperty-line-fg-regular-data-name: #f2a9d0;
+    qproperty-line-fg-dummy-data-name: #f2a9d0;
+    qproperty-line-fg-demangled-name: #f2a9d0;
+    qproperty-line-fg-import-name: #f2a9d0;
+    qproperty-line-fg-alt-opnd: #f2a9d0;
+    qproperty-line-fg-unknown-name: #9a7570;
+    qproperty-line-fg-dummy-unknown-name: #9a7570;
+    qproperty-line-fg-hidden: #9a7570;
+    qproperty-line-fg-asm-directive: #b08f8c;
+    qproperty-line-fg-segment-name: #b08f8c;
+    qproperty-line-fg-macro: #ff5a5f;
+    qproperty-line-fg-code-xref: #9a7570;
+    qproperty-line-fg-data-xref: #9a7570;
+    qproperty-line-fg-code-xref-to-tail: #ff9f6b;
+    qproperty-line-fg-data-xref-to-tail: #ff9f6b;
+    qproperty-line-fg-line-prefix: #86625e;
+    qproperty-line-fg-opcode-byte: #86625e;
+    qproperty-line-fg-error: #ff5f6d;
+    qproperty-line-fg-patched-bytes: #ff9f6b;
+    qproperty-line-fg-unsaved-changes: #ff5a5f;
+
+    qproperty-line-pfx-libfunc: #ffd27a;
+    qproperty-line-pfx-func: #f2a9d0;
+    qproperty-line-pfx-insn: #86625e;
+    qproperty-line-pfx-data: #a8e0b0;
+    qproperty-line-pfx-unexplored: #9a7570;
+    qproperty-line-pfx-extern: #ff9f6b;
+    qproperty-line-pfx-current-item: #ff5a5f;
+    qproperty-line-pfx-current-line: #ff5a5f;
+
+    qproperty-line-bg-highlight: #5f3a2b;
+    qproperty-line-bg-hint: #231719;
+    qproperty-line-bg-bpt-enabled: #6a2a31;
+    qproperty-line-bg-bpt-disabled: #273f2f;
+    qproperty-line-bg-dbg: #1a0e10;
+    qproperty-line-bg-dbg-ip: #5f4930;
+    qproperty-line-bg-dbg-ip-bpt-enabled: #975145;
+    qproperty-line-bg-dbg-ip-bpt-disabled: #5f4930;
+    qproperty-line-bg-dbg-ip-bpt-unavailable: #5f4930;
+    qproperty-line-bg-dbg-bpt-enabled: #6a2a31;
+    qproperty-line-bg-dbg-bpt-disabled: #273f2f;
+    qproperty-line-bg-dbg-bpt-unavailable: #5f3a2b;
+
+    /* transparent graph canvas so the art shows behind the nodes */
+    qproperty-graph-bg-top: rgba(26, 14, 16, 0);
+    qproperty-graph-bg-bottom: rgba(26, 14, 16, 0);
+    qproperty-graph-node-title-normal: #34181b;
+    qproperty-graph-node-title-selected: #4c1f21;
+    qproperty-graph-node-title-current: #6a292c;
+    qproperty-graph-node-frame-group: #ff5a5f;
+    qproperty-graph-node-shadow: #000000;
+    qproperty-graph-node-high1: #483525;
+    qproperty-graph-node-high2: #452d36;
+    qproperty-graph-node-foreign: #ff5f6d;
+    qproperty-graph-edge-normal: #ffd27a;
+    qproperty-graph-edge-yes: #4fd18b;
+    qproperty-graph-edge-no: #ff5f6d;
+    qproperty-graph-edge-high: #ff9f6b;
+    qproperty-graph-edge-current: #ff5a5f;
+}
+
+/* keep the art visible while debugging */
+CustomIDAMemo[debugging="true"]
+{
+    qproperty-line-bg-default: rgba(26, 14, 16, 0);
+    qproperty-line-fg-default: #f6e8e6;
+    qproperty-line-pfx-current-item: #ff5a5f;
+    qproperty-line-pfx-current-line: #ff5a5f;
+    qproperty-line-bg-bpt-enabled: #6a2a31;
+    qproperty-line-bg-bpt-disabled: #273f2f;
+}
+
+/* hover hints: solid, no art */
+CustomIDAMemo[hints="true"]
+{
+    background: #231719;
+    qproperty-line-bg-default: #231719;
+    qproperty-line-fg-default: #f6e8e6;
+    qproperty-line-pfx-current-item: #ff5a5f;
+    qproperty-line-pfx-current-line: #ff5a5f;
+}
+
+IDAViewHost
+{
+    background: #1a0e10;
+}
+
+ecfringe_t,
+TextArrows
+{
+    background: transparent;
+}
+
+TextArrows
+{
+    qproperty-jump-in-function: #ffd27a;
+    qproperty-jump-external-to-function: #f2a9d0;
+    qproperty-jump-under-cursor: #ff5a5f;
+    qproperty-jump-target: #a8e0b0;
+    qproperty-register-target: #ff9f6b;
+}
+
+navband_t
+{
+    qproperty-lib-function: #ffd27a;
+    qproperty-function: #ff5a5f;
+    qproperty-code: #f2a9d0;
+    qproperty-data: #f2a9d0;
+    qproperty-undefined: #3a1a1e;
+    qproperty-extern: #ff9f6b;
+    qproperty-error: #ff5f6d;
+    qproperty-gap: #100809;
+    qproperty-cursor: #f6e8e6;
+    qproperty-auto-analysis-cursor: #ff9f6b;
+}
