@@ -128,6 +128,24 @@ click-through overlay on top of the graph canvas and blends the art in:
 - picks the active theme from IDA's stylesheet automatically and does nothing
   for themes without an `art.png`. Any error means it simply draws nothing.
 
+## Resource usage
+
+The themes themselves are plain CSS and cost nothing extra. The plugin is the
+only part that does any work. Measured on IDA Pro 9.5, Windows 11, 125% display
+scaling, idle in graph view, plugin on vs off (4 runs of 60 s each):
+
+| | Plugin off | Plugin on | Difference |
+|---|---|---|---|
+| CPU, idle in graph view | 3.6% of one core | 5.0% of one core | about +1.3% |
+| Memory (IDA private bytes) | ~327 MB | ~335 MB | about +8 MB |
+| Cached art image | – | 3.4 MB | one image, sized for your display |
+| Full graph repaint | 12–13 ms | 13–14 ms | about +1 ms |
+| Text view | – | – | no cost (the plugin doesn't draw there) |
+
+Most of the idle CPU comes from IDA repainting the graph twice a second on its
+own; the overlay has to be redrawn with it. There are no timers or background
+threads in the plugin.
+
 ## Customising
 
 - **Change the art**: replace `art.png` (960x600) and `art@2x.png` (1920x1200)
