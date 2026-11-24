@@ -1,31 +1,94 @@
-# idanime
+<p align="center">
+  <img src="screenshots/banner.png" alt="idanime" width="100%">
+</p>
 
-Anime themes for IDA Pro 9.x. Twelve colour schemes, each with its own
-background art in the bottom-right corner of the disassembly, pseudocode and
-graph views.
+<p align="center">
+  <b>Anime themes for IDA Pro 9.x</b><br>
+  Twelve colour schemes, each with its own background art in the disassembly, pseudocode and graph views.
+</p>
 
-![natsu-matsuri](screenshots/natsu-matsuri.webp)
+<p align="center">
+  <img src="https://img.shields.io/badge/IDA%20Pro-9.x-ff7eb6?style=flat-square" alt="IDA Pro 9.x">
+  <img src="https://img.shields.io/badge/themes-12-c3a6ff?style=flat-square" alt="12 themes">
+  <img src="https://img.shields.io/badge/IDAPython-PySide6-6fd3ff?style=flat-square" alt="IDAPython / PySide6">
+  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-b6f09c?style=flat-square" alt="platforms">
+  <img src="https://img.shields.io/badge/license-MIT-ffb347?style=flat-square" alt="MIT license">
+</p>
 
-The art also shows in graph view (with the included plugin):
+<p align="center">
+  <a href="#themes">Themes</a> ·
+  <a href="#quick-install">Install</a> ·
+  <a href="#how-it-works">How it works</a> ·
+  <a href="#resource-usage">Resource usage</a> ·
+  <a href="#customising">Customising</a> ·
+  <a href="#troubleshooting">Troubleshooting</a>
+</p>
 
-![graph view](screenshots/graph-view.webp)
+---
+
+<p align="center">
+  <img src="screenshots/natsu-matsuri.webp" alt="natsu-matsuri, text view">
+  <br><sub><i>natsu-matsuri in the disassembly view</i></sub>
+</p>
+
+<p align="center">
+  <img src="screenshots/graph-view.webp" alt="yuki-samurai, graph view">
+  <br><sub><i>yuki-samurai in graph view (needs the included plugin)</i></sub>
+</p>
 
 ## Themes
 
-| | |
-|---|---|
-| **sakura-yoru**: cherry blossoms, purple night ![](screenshots/sakura-yoru.webp) | **neon-ronin**: synthwave sun, city skyline ![](screenshots/neon-ronin.webp) |
-| **hoshizora-witch**: witch on a crescent moon ![](screenshots/hoshizora-witch.webp) | **kitsune-yuki**: fox girl, snow, icy blue ![](screenshots/kitsune-yuki.webp) |
-| **akatsuki-torii**: torii gate, kitsune mask, red dawn ![](screenshots/akatsuki-torii.webp) | **ame-lofi**: rainy window, headphones ![](screenshots/ame-lofi.webp) |
-| **kurenai-vampire**: crimson moon, bats ![](screenshots/kurenai-vampire.webp) | **kido-pilot**: mecha pilot HUD ![](screenshots/kido-pilot.webp) |
-| **denno-hacker**: green katakana rain ![](screenshots/denno-hacker.webp) | **yuki-samurai**: samurai, grey moon ![](screenshots/yuki-samurai.webp) |
-| **maho-pastel** (light): magical girl, pink pastel ![](screenshots/maho-pastel.webp) | **natsu-matsuri**: summer festival fireworks ![](screenshots/natsu-matsuri.webp) |
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="screenshots/sakura-yoru.webp"><br><b>sakura-yoru</b><br><sub>cherry blossoms, purple night</sub></td>
+    <td align="center" width="50%"><img src="screenshots/neon-ronin.webp"><br><b>neon-ronin</b><br><sub>synthwave sun, city skyline</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/hoshizora-witch.webp"><br><b>hoshizora-witch</b><br><sub>witch on a crescent moon</sub></td>
+    <td align="center"><img src="screenshots/kitsune-yuki.webp"><br><b>kitsune-yuki</b><br><sub>fox girl, snow, icy blue</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/akatsuki-torii.webp"><br><b>akatsuki-torii</b><br><sub>torii gate, kitsune mask, red dawn</sub></td>
+    <td align="center"><img src="screenshots/ame-lofi.webp"><br><b>ame-lofi</b><br><sub>rainy window, headphones</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/kurenai-vampire.webp"><br><b>kurenai-vampire</b><br><sub>crimson moon, bats</sub></td>
+    <td align="center"><img src="screenshots/kido-pilot.webp"><br><b>kido-pilot</b><br><sub>mecha pilot HUD</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/denno-hacker.webp"><br><b>denno-hacker</b><br><sub>green katakana rain</sub></td>
+    <td align="center"><img src="screenshots/yuki-samurai.webp"><br><b>yuki-samurai</b><br><sub>samurai, grey moon</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/maho-pastel.webp"><br><b>maho-pastel</b> (light)<br><sub>magical girl, pink pastel</sub></td>
+    <td align="center"><img src="screenshots/natsu-matsuri.webp"><br><b>natsu-matsuri</b><br><sub>summer festival fireworks</sub></td>
+  </tr>
+</table>
 
-All the artwork side by side:
+<details>
+<summary>All the artwork side by side</summary>
+<br>
+<img src="screenshots/themes.png" alt="all themes">
+</details>
 
-![all themes](screenshots/themes.png)
+## Quick install
 
-## Install
+```powershell
+# Windows (PowerShell), from the cloned folder
+"themes", "plugins" | % { New-Item -ItemType Directory -Force "$env:APPDATA\Hex-Rays\IDA Pro\$_" | Out-Null }
+Copy-Item -Recurse -Force .\themes\* "$env:APPDATA\Hex-Rays\IDA Pro\themes\"
+Copy-Item -Force .\plugins\anime_graph_bg.py "$env:APPDATA\Hex-Rays\IDA Pro\plugins\"
+```
+
+```sh
+# Linux / macOS
+mkdir -p ~/.idapro/themes ~/.idapro/plugins
+cp -r themes/* ~/.idapro/themes/ && cp plugins/anime_graph_bg.py ~/.idapro/plugins/
+```
+
+Restart IDA, then **Options > Colors... > Theme**. The step-by-step version is below.
+
+## Step-by-step install
 
 You need IDA Pro 9.x (tested on 9.5). The plugin needs IDAPython, which IDA 9
 ships with.
